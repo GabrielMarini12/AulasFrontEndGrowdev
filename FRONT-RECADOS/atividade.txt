@@ -1,0 +1,32 @@
+# Cadastro de Recados
+
+### Especificação da Atividade
+
+**Objetivo:**
+Desenvolver uma funcionalidade para cadastrar recados através de um formulário HTML e enviar os dados para a API.
+
+**Componentes:**
+
+1. Formulário HTML para entrada de dados.
+2. Captura de dados do formulário.
+3. Envio de dados para o servidor.
+4. Limpeza dos campos do formulário após envio.
+5. Redirecionamento após cadastro bem-sucedido.
+
+**Passos para Implementação:**
+
+1. **HTML do Formulário:**
+    - Criar um formulário com campos para título e descrição, e um botão de envio.
+2. **Captura de Elementos do Formulário:**
+    - Capturar os elementos do formulário (título e descrição) com `document.getElementById`.
+3. **Função para Enviar Dados ao Servidor:**
+    - Implementar a função `createNewNote` que envia os dados para o servidor utilizando uma requisição POST.
+    - Tratar a resposta do servidor:
+        - Se sucesso, limpar os campos do formulário e redirecionar para `index.html`.
+        - Se erro, exibir uma mensagem no console.
+4. **Evento de Envio do Formulário:**
+    - Adicionar um evento `submit` ao formulário.
+    - Prevenir o comportamento padrão do formulário.
+    - Obter os valores dos campos de entrada.
+    - Criar um objeto `newNote` com os valores capturados e um `userId` fictício (substituir pelo real).
+    - Chamar a função `createNewNote`.

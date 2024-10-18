@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+}
+
+form {
+  width: 600px;
+  padding: 10px;
+}
+
+.dados-pessoais {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+.dados-pessoais div {
+  margin-bottom: 5px;
+}
+
+.dados-profissionais {
+  padding: 10px;
+}
+
+.dados-profissionais p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.dados-profissionais label {
+  margin-right: 8px;
+}
+
+.dados-profissionais input {
+  margin-bottom: 20px;
+}
+
+.btn-enviar,
+.btn-limpar {
+  margin-top: 15px;
+  padding: 2px;
+}
