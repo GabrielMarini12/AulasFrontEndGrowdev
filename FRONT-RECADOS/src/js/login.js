@@ -8,6 +8,7 @@ async function validateLogin() {
       email: email.value,
       password: password.value,
     });
+    const userEmail = response.data.email;
 
     if (email.value === "" && password.value === "") {
       alert("Login e senha são obrigatórios!");
@@ -18,6 +19,8 @@ async function validateLogin() {
 
       email.value = "";
       password.value = "";
+
+      localStorage.setItem("email", userEmail);
 
       location.href = "list-note.html";
     }

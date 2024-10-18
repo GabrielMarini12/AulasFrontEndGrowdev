@@ -22,7 +22,7 @@ async function createNewNote(note) {
 formNewNote.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const email = "gabrielmarini12@icloud.com";
+  const email = localStorage.getItem("email");
 
   const newNote = {
     title: title.value,

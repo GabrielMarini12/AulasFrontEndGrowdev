@@ -3,9 +3,9 @@ const notesContainer = document.querySelector(".notes-list");
 async function fetchNotes() {
   try {
     notesContainer.innerHTML = "";
-    const userId = "gabrielmarini12@icloud.com";
+    const email = localStorage.getItem("email");
 
-    const response = await api.get(`/notes/message/${userId}`);
+    const response = await api.get(`/notes/message/${email}`);
     const notes = response.data.notes;
 
     notes.forEach((note) => {
