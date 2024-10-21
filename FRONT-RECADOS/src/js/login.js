@@ -2,25 +2,32 @@ const formLogin = document.getElementById("form-login");
 const email = document.getElementById("email-login");
 const password = document.getElementById("password-login");
 
-async function validateLogin() {
-  try {
-    const response = await api.post("/users/login", {
-      email: email.value,
-      password: password.value,
-    });
-    const userEmail = response.data.email;
+function setError(input, message) {
+  const formControl = input.parentElement;
+  const small = formControl.querySelector("small");
 
-    if (email.value === "" && password.value === "") {
-      alert("Login e senha são obrigatórios!");
-    }
+  small.textContent = message;
+  formControl.classList.remove("success");
+  formControl.classList.add("error");
+}
+
+function setSuccess(input) {
+  const formControl = input.parentElement;
+
+  formControl.classList.remove("error");
+  formControl.classList.add("success");
+}
+
+async function login(data) {
+  try {
+    const response = await api.post("/users/login", data);
+    const email = response.data.email;
 
     if (response.status === 200) {
-      alert("Login realizado com sucesso!");
+      localStorage.setItem("email", email);
 
       email.value = "";
       password.value = "";
-
-      localStorage.setItem("email", userEmail);
 
       location.href = "list-note.html";
     }
@@ -32,5 +39,24 @@ async function validateLogin() {
 formLogin.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  validateLogin();
+  const data = {
+    email: email.value,
+    password: password.value,
+  };
+
+  if (!email.value) {
+    setError(email, "E-mail é obrigatório!");
+  } else {
+    setSuccess(email);
+  }
+
+  if (!password.value) {
+    setError(password, "Senha é obrigatória!");
+  } else {
+    setSuccess(password);
+  }
+
+  if (data.email && data.password) {
+    login(data);
+  }
 });

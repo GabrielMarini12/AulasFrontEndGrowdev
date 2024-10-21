@@ -1,0 +1,24 @@
+O que é Local Storage (Armazenamento Local)?
+O Local Storage, ou Armazenamento Local, é uma tecnologia de armazenamento de dados que permite que os navegadores 
+da web mantenham informações de forma persistente no dispositivo do usuário.
+
+
+Como funciona o Local Storage?
+O funcionamento do Local Storage é bastante simples e intuitivo. Quando um desenvolvedor web utiliza essa tecnologia, 
+ele pode armazenar pares de chave-valor no navegador do usuário. 
+Esses dados permanecem disponíveis mesmo após o usuário sair do site ou fechar o navegador.
+
+
+Vantagens
+Como as informações armazenadas não são compartilhadas com o servidor, esse fato permite uma maior agilidade tendo em vista que, 
+não há necessidade de fazer requisições. Outra vantagem é que os dados são preservados sem exigir qualquer esforço extra do usuário. 
+Isso significa que quando eles retornam à página ou até mesmo atualizam suas preferências, elas continuam como foram previamente definidas.
+
+
+Através do navegador é possível testar alguns dos principais métodos de armazenamento local, são estes:
+setItem(chave, valor) :
+Armazene um item com a chave e o valor.
+getItem(chave):
+Recupera o valor do item com o nome da chave.
+removeItem(chave):
+Remova o item com chave do localStorage.
