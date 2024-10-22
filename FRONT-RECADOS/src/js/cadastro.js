@@ -22,11 +22,10 @@ function setSuccess(input) {
 async function cadastro(data) {
   try {
     const response = await api.post("/users/signup", data);
+    console.log(response.data);
 
     if (response.status === 201) {
-      localStorage.setItem("name", name);
-      localStorage.setItem("email", email);
-      localStorage.setItem("password", password);
+      localStorage.setItem("user", JSON.stringify(response.data.user));
 
       name.value = "";
       email.value = "";
@@ -68,6 +67,5 @@ formCadastro.addEventListener("submit", (event) => {
 
   if (data.name && data.email && data.password) {
     cadastro(data);
-    console.log(data);
   }
 });
