@@ -53,6 +53,8 @@ async function fetchNotes(page) {
       if (notes.length === 0) {
         console.log("Nenhum recado para mostrar");
       }
+
+      updatePaginationButtons();
     });
   } catch (error) {
     console.error("Erro ao buscar recados.", error);
