@@ -31,10 +31,11 @@ async function cadastro(data) {
       email.value = "";
       password.value = "";
 
+      alert("Usuário cadastrado com sucesso.");
       location.href = "login.html";
     }
   } catch (error) {
-    console.error("Erro ao fazer cadastro.", error);
+    console.error("Erro ao cadastrar usuário.", error);
   }
 }
 

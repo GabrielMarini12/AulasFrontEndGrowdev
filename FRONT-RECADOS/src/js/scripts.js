@@ -11,6 +11,12 @@ async function fetchNotes(page) {
     notesContainer.innerHTML = "";
     const email = localStorage.getItem("email");
 
+    if (!email) {
+      alert("Você precisa fazer login para visualizar os recados.");
+      location.href = "login.html";
+      return;
+    }
+
     const params = {
       page: page,
       perPage: 3,
