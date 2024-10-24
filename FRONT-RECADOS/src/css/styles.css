@@ -28,6 +28,7 @@ a {
 
 .container {
   width: 30rem;
+  position: relative;
 }
 
 .header {
@@ -219,4 +220,19 @@ a {
   background-color: #d3d3d3;
   cursor: not-allowed;
   opacity: 0.6;
+}
+
+.add-recado {
+  position: absolute;
+  color: white;
+  padding: 3px 12px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #087f5b;
+  border: #087f5b;
+  border-radius: 50%;
+  right: -100px;
+  bottom: 50px;
+  box-shadow: 1px 2px 3px black;
+  cursor: pointer;
 }

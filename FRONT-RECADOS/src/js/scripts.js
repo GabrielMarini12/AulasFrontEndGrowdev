@@ -3,6 +3,8 @@ const notesContainer = document.querySelector(".notes-list");
 const prevPage = document.getElementById("prev-page");
 const nextPage = document.getElementById("next-page");
 
+const btnAddRecado = document.querySelector(".add-recado");
+
 let currentPage = 1;
 let totalPages = 1;
 
@@ -93,3 +95,7 @@ function updatePaginationButtons() {
   prevPage.disabled = currentPage === 1;
   nextPage.disabled = currentPage === totalPages;
 }
+
+btnAddRecado.addEventListener("click", () => {
+  location.href = `new-note.html`;
+});

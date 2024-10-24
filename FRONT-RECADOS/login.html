@@ -16,45 +16,47 @@
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="title">Fazer login em sua conta</h1>
-      <h2 class="subtitle">
-        Ainda não tem uma conta?
-        <a href="./new-user.html">Cadastre-se</a>
-      </h2>
-    </header>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Fazer login em sua conta</h1>
+        <h2 class="subtitle">
+          Ainda não tem uma conta?
+          <a href="./new-user.html">Cadastre-se</a>
+        </h2>
+      </header>
 
-    <main>
-      <form id="form-login">
-        <div class="form-control">
-          <label for="email-login">E-mail</label>
-          <input
-            type="email"
-            id="email-login"
-            placeholder="Insira seu e-mail..."
-          />
+      <main>
+        <form id="form-login">
+          <div class="form-control">
+            <label for="email-login">E-mail</label>
+            <input
+              type="email"
+              id="email-login"
+              placeholder="Insira seu e-mail..."
+            />
 
-          <i class="bi bi-exclamation-circle"></i>
-          <i class="bi bi-check-circle"></i>
-          <small></small>
-        </div>
+            <i class="bi bi-exclamation-circle"></i>
+            <i class="bi bi-check-circle"></i>
+            <small></small>
+          </div>
 
-        <div class="form-control">
-          <label for="password-login">Senha</label>
-          <input
-            type="password"
-            id="password-login"
-            placeholder="Insira sua senha..."
-          />
+          <div class="form-control">
+            <label for="password-login">Senha</label>
+            <input
+              type="password"
+              id="password-login"
+              placeholder="Insira sua senha..."
+            />
 
-          <i class="bi bi-exclamation-circle"></i>
-          <i class="bi bi-check-circle"></i>
-          <small></small>
-        </div>
+            <i class="bi bi-exclamation-circle"></i>
+            <i class="bi bi-check-circle"></i>
+            <small></small>
+          </div>
 
-        <button class="btn-submit">Entrar</button>
-      </form>
-    </main>
+          <button class="btn-submit">Entrar</button>
+        </form>
+      </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/js/api.js"></script>

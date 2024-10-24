@@ -16,58 +16,60 @@
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="title">Cadastre-se para criar uma conta</h1>
-      <h2 class="subtitle">
-        Já tem uma conta?
-        <a href="./login.html">Faça login</a>
-      </h2>
-    </header>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Cadastre-se para criar uma conta</h1>
+        <h2 class="subtitle">
+          Já tem uma conta?
+          <a href="./login.html">Faça login</a>
+        </h2>
+      </header>
 
-    <main>
-      <form id="form-cadastro">
-        <div class="form-control">
-          <label for="name-cadastro">Nome</label>
-          <input
-            type="text"
-            id="name-cadastro"
-            placeholder="Insira seu nome..."
-          />
+      <main>
+        <form id="form-cadastro">
+          <div class="form-control">
+            <label for="name-cadastro">Nome</label>
+            <input
+              type="text"
+              id="name-cadastro"
+              placeholder="Insira seu nome..."
+            />
 
-          <i class="bi bi-exclamation-circle"></i>
-          <i class="bi bi-check-circle"></i>
-          <small></small>
-        </div>
+            <i class="bi bi-exclamation-circle"></i>
+            <i class="bi bi-check-circle"></i>
+            <small></small>
+          </div>
 
-        <div class="form-control">
-          <label for="email-cadastro">E-mail</label>
-          <input
-            type="email"
-            id="email-cadastro"
-            placeholder="Insira seu e-mail..."
-          />
+          <div class="form-control">
+            <label for="email-cadastro">E-mail</label>
+            <input
+              type="email"
+              id="email-cadastro"
+              placeholder="Insira seu e-mail..."
+            />
 
-          <i class="bi bi-exclamation-circle"></i>
-          <i class="bi bi-check-circle"></i>
-          <small></small>
-        </div>
+            <i class="bi bi-exclamation-circle"></i>
+            <i class="bi bi-check-circle"></i>
+            <small></small>
+          </div>
 
-        <div class="form-control">
-          <label for="password-cadastro">Senha</label>
-          <input
-            type="password"
-            id="password-cadastro"
-            placeholder="Insira sua senha..."
-          />
+          <div class="form-control">
+            <label for="password-cadastro">Senha</label>
+            <input
+              type="password"
+              id="password-cadastro"
+              placeholder="Insira sua senha..."
+            />
 
-          <i class="bi bi-exclamation-circle"></i>
-          <i class="bi bi-check-circle"></i>
-          <small></small>
-        </div>
+            <i class="bi bi-exclamation-circle"></i>
+            <i class="bi bi-check-circle"></i>
+            <small></small>
+          </div>
 
-        <button class="btn-submit">Cadastrar</button>
-      </form>
-    </main>
+          <button class="btn-submit">Cadastrar</button>
+        </form>
+      </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/js/api.js"></script>
